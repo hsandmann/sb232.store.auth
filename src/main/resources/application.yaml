@@ -10,3 +10,9 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka/}
+
+store:
+  jwt:
+    issuer: store
+    secretKey: hIiyhhEj2pNhV2p3Mk6tFhjiG4RObrhEhIiyhhEj2pNhV2p3Mk6tFhjiG4RObrhEhIiyhhEj2pNhV2p3Mk6tFhjiG4RObrhE
+    duration: 31536000000 # 365 days
