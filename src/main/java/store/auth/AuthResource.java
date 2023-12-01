@@ -29,4 +29,14 @@ public class AuthResource implements AuthController {
         }
     }
 
+    @Override
+    public IdOut id(IdIn in) {
+        try {
+            return new IdOut(authService.id(in.token()));
+        } catch (RuntimeException e) {
+            e.printStackTrace();
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, e.getMessage());
+        }
+    }
+
 }
