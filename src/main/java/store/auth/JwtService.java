@@ -25,7 +25,7 @@ public class JwtService {
     private String issuer;
 
     @Value("${store.jwt.duration}")
-    private long duration;
+    private long duration = 1l;
 
     private SecretKey key;
     private JwtParser parser;
